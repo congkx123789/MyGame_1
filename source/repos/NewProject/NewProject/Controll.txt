@@ -1,0 +1,7 @@
+6
+animationManager/run.txt d
+animationManager/runleft.txt a
+animationManager/basis.txt +
+animationManager/basisleft.txt -
+animationManager/jum.txt k
+animationManager/jumleft.txt !

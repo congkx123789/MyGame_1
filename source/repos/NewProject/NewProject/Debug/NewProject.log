@@ -1,0 +1,18 @@
+﻿  function1.cpp
+  Game.cpp
+  GameCharacter.cpp
+  main.cpp
+  MAP.cpp
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(50,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(74,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(82,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(83,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(95,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(96,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(106,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(107,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(129,21): warning C4018: '<': signed/unsigned mismatch
+  phantich.cpp
+  speed.cpp
+  Generating Code...
+  NewProject.vcxproj -> C:\Users\havuc\source\repos\NewProject\Debug\NewProject.exe

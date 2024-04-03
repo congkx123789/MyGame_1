@@ -1,0 +1,5 @@
+4
+Leftplayer/adventurer-idle-2-00.png
+Leftplayer/adventurer-idle-2-01.png
+Leftplayer/adventurer-idle-2-02.png
+Leftplayer/adventurer-idle-2-03.png

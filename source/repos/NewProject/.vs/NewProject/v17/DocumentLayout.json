@@ -1,0 +1,261 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\havuc\\source\\repos\\NewProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\function1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\function1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\GameCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\GameCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\MAP.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\MAP.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\phantich.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\phantich.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\speed.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\speed.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\function1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\function1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\GameCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\GameCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\MAP.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\MAP.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\phantich.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\phantich.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\speed.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F41A0389-7D98-43D3-B06E-1FAF3E2CEE72}|NewProject\\NewProject.vcxproj|solutionrelative:NewProject\\speed.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 247,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 388,
+          "SelectedChildIndex": 17,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "function1.cpp",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\function1.cpp",
+              "RelativeDocumentMoniker": "NewProject\\function1.cpp",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\function1.cpp",
+              "RelativeToolTip": "NewProject\\function1.cpp",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAswEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-03T07:30:08.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GameCharacter.cpp",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\GameCharacter.cpp",
+              "RelativeDocumentMoniker": "NewProject\\GameCharacter.cpp",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\GameCharacter.cpp",
+              "RelativeToolTip": "NewProject\\GameCharacter.cpp",
+              "ViewState": "AQIAADsAAAAAAAAAAAAswF4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-03T07:29:29.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MAP.cpp",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\MAP.cpp",
+              "RelativeDocumentMoniker": "NewProject\\MAP.cpp",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\MAP.cpp",
+              "RelativeToolTip": "NewProject\\MAP.cpp",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAswI0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-03T07:29:20.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "phantich.cpp",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\phantich.cpp",
+              "RelativeDocumentMoniker": "NewProject\\phantich.cpp",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\phantich.cpp",
+              "RelativeToolTip": "NewProject\\phantich.cpp",
+              "ViewState": "AQIAADEAAAAAAAAAAAAAwE8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-03T07:28:19.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "speed.cpp",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\speed.cpp",
+              "RelativeDocumentMoniker": "NewProject\\speed.cpp",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\speed.cpp",
+              "RelativeToolTip": "NewProject\\speed.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-03T07:28:02.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\Game.cpp",
+              "RelativeDocumentMoniker": "NewProject\\Game.cpp",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\Game.cpp",
+              "RelativeToolTip": "NewProject\\Game.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-03T07:26:33.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MAP.h",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\MAP.h",
+              "RelativeDocumentMoniker": "NewProject\\MAP.h",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\MAP.h",
+              "RelativeToolTip": "NewProject\\MAP.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-03T07:26:28.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameCharacter.h",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\GameCharacter.h",
+              "RelativeDocumentMoniker": "NewProject\\GameCharacter.h",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\GameCharacter.h",
+              "RelativeToolTip": "NewProject\\GameCharacter.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-03T07:25:31.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "speed.h",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\speed.h",
+              "RelativeDocumentMoniker": "NewProject\\speed.h",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\speed.h",
+              "RelativeToolTip": "NewProject\\speed.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-03T07:25:25.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "function1.h",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\function1.h",
+              "RelativeDocumentMoniker": "NewProject\\function1.h",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\function1.h",
+              "RelativeToolTip": "NewProject\\function1.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-03T07:25:20.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "phantich.h",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\phantich.h",
+              "RelativeDocumentMoniker": "NewProject\\phantich.h",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\phantich.h",
+              "RelativeToolTip": "NewProject\\phantich.h",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAswDAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-03T07:08:26.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\Game.h",
+              "RelativeDocumentMoniker": "NewProject\\Game.h",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\Game.h",
+              "RelativeToolTip": "NewProject\\Game.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAswCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-03T07:08:11.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\main.cpp",
+              "RelativeDocumentMoniker": "NewProject\\main.cpp",
+              "ToolTip": "C:\\Users\\havuc\\source\\repos\\NewProject\\NewProject\\main.cpp",
+              "RelativeToolTip": "NewProject\\main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-23T02:51:58.156Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

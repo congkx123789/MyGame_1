@@ -1,0 +1,7 @@
+6
+player/adventurer-run-00.png
+player/adventurer-run-01.png
+player/adventurer-run-02.png
+player/adventurer-run-03.png
+player/adventurer-run-04.png
+player/adventurer-run-05.png
