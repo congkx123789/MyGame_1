@@ -6,10 +6,11 @@
 #include "SDL_image.h"
 #include "fstream"
 #include <math.h>
-#include "phantich.h" // Bao g?m ??nh ngh?a c?a l?p phantich
+#include"animation.h"
+#include "phantich.h"
 #include "function1.h"
 #include "speed.h"
-#include "GameCharacter.h" // Bao g?m ??nh ngh?a c?a l?p GameCharacter
+#include "GameCharacter.h" 
 #include "MAP.h"
 
 using namespace std;
@@ -29,10 +30,12 @@ public:
     void ALLold();
     void return_All_time();
 
+
 private:
     double TIMENOW;
     SDL_Window* window;
     SDL_Event event;
+
     SDL_Rect Screen;
     SDL_Renderer* renderer;
 };

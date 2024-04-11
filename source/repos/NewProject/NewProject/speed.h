@@ -21,6 +21,7 @@ private:
 	double SpeedX = 0;
 
 	double run = 0;
+	double run1 = 0;
 
 	double x = 0;
 
@@ -30,4 +31,3 @@ private:
 
 	double g1 = -200000;
 };
-

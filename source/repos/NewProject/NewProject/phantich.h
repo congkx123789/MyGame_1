@@ -1,5 +1,6 @@
 #pragma once
 #include"Game.h"
+using namespace std;
 class phantich
 {
 public:
@@ -8,20 +9,9 @@ public:
 
 	void checkUP(char up);
 
-	bool find1(char key);
+	bool find1(char key) { return output[key]; }
 
-	bool return_jumb() { return jumb; }
-
-	void SetJumb(Uint32 x, Uint32 y) {
-		if (x == y)jumb = 1;
-		else jumb = 0;
-	}
-
-	bool checkSDL(SDL_Rect a, SDL_Rect b) {
-		if (a.x != b.x)return 0;
-		if (a.y != b.y)return 0;
-		return 1;
-	}
+	bool Get_Jumb() { return jumb; }
 
 	bool Getspeedx() { return speedx; }
 
@@ -29,20 +19,36 @@ public:
 
 	void checkRECT(SDL_Rect old, SDL_Rect check);
 
-	char checkinput();
+	void setALL(map<char, pair<int, SDL_Texture**>>* CharacterTex1, double* TIME) {
+		CharacterTex = CharacterTex1;
+		TIMENOW = TIME;
+	}
+
+	void Charac();
+
+	SDL_Texture* reTEX() { return mainTex; }
 
 private:
+	double* TIMENOW;
 	bool jumb = 0;
 	bool speedx = 0;
 	bool speedg = 0;
 	int oldg = 0;
-
 	bool chieu = 1;
 
-	std::map<char, bool> input;
+	bool jumb2 = 0;
 
-	bool jumb_animation;
+	map<char, bool> input;
+	map<char, bool> output;
 
+	SDL_Texture* mainTex;
 	Uint32 test;
+
+	map<char, pair<int, SDL_Texture**>>* CharacterTex = nullptr;
+
+	char* oldchar = nullptr;
+	char* oldchar1 = nullptr;
+	char* oldchar2 = nullptr;
+
 };
 

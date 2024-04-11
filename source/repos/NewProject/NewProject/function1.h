@@ -55,6 +55,15 @@ public:
 		if (check1) second1 = second1 * (-1.0);
 	}
 
+	SDL_Rect gop(SDL_Rect old, SDL_Rect check) { return { min(check.x,old.x),min(check.y,old.y),check.w + abs(check.x - old.x),check.h + abs(check.y - old.y) }; }
+
+	SDL_Rect center(SDL_Rect little1, SDL_Rect huge, SDL_Rect BackGR);
+
+	SDL_Rect nhan(SDL_Rect hazz, double ab);
+
+	double chia(int a, int b);
+
+
 private:
 
 	double first1;

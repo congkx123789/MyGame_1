@@ -1,11 +1,12 @@
 #include "GameCharacter.h"
 
+function1 tien_ich;
+
 map<SDL_Rect*, pair<phantich, speed>> input;
 
 GameCharacter::GameCharacter(const char* file, SDL_Renderer* renderer, int x, int y)
 {
 	CharacterTex = new map<char, pair <int, SDL_Texture**>>();
-
 	render = renderer;
 	int n, n1;
 	string a, b;
@@ -24,7 +25,7 @@ GameCharacter::GameCharacter(const char* file, SDL_Renderer* renderer, int x, in
 
 		(*CharacterTex)[key].second = new SDL_Texture * [n1];
 		(*CharacterTex)[key].first = n1;
-
+		cout << key << endl;
 		for (int i = 0; i < n1; i++) {
 			readmyfile >> b;
 
@@ -33,28 +34,26 @@ GameCharacter::GameCharacter(const char* file, SDL_Renderer* renderer, int x, in
 		}
 		readmyfile.close();
 	}
+
 	readfile.close();
-	Address = { x,y,37,50 };
-	sizePIC = new SDL_Rect({ 7,6,28,30 });
+	Address = { x,y,100,74 };
+	sizePIC = new SDL_Rect({ 0,0,50,36 });
+
+	input[sizePIC].first.setALL(CharacterTex, &TIMEnow);
 }
 
 void GameCharacter::check()
 {
 	testADD = Address;
 
-	if (input[sizePIC].first.find1('a')) {
+	input[sizePIC].first.Charac();
+
+	if (input[sizePIC].first.find1('a'))
 		testADD.x -= input[sizePIC].second.runright(TIMEnow, TIMEold);
-		//cout << "a" << endl;
-	}
-	if (input[sizePIC].first.find1('d')) {
+	if (input[sizePIC].first.find1('d'))
 		testADD.x += input[sizePIC].second.runright(TIMEnow, TIMEold);
-		//cout << "d" << endl;
-	}
-	if (input[sizePIC].first.find1('k')) {
+	if (input[sizePIC].first.find1('k'))
 		testADD.y += input[sizePIC].second.jumb();
-		//cout << "k" << endl;
-	}
-	//input[sizePIC].first.checkUP('k');
 	testADD.y += input[sizePIC].second.down(TIMEnow, TIMEold);
 
 }
@@ -64,6 +63,7 @@ void GameCharacter::resetSPE(SDL_Rect check)
 	input[sizePIC].first.checkRECT(testADD, check);
 	if (input[sizePIC].first.find1('d') == 0 && input[sizePIC].first.find1('a') == 0)
 		input[sizePIC].second.resetX();
+
 	if (input[sizePIC].first.Getspeedx())input[sizePIC].second.resetX();
 	if (input[sizePIC].first.Getspeedg())input[sizePIC].second.resetG();
 
@@ -71,15 +71,12 @@ void GameCharacter::resetSPE(SDL_Rect check)
 
 }
 
-void GameCharacter::render1(int x, int y)
+void GameCharacter::render1(pair<SDL_Rect, double> Screen1)
 {
 
-	SDL_Rect ADD = Address;
-	ADD.x -= x;
-	ADD.y -= y;
-	char key = input[sizePIC].first.checkinput();
-	SDL_RenderCopy(render, (*CharacterTex)[key].second[int(TIMEnow * double(8.33)) % (*CharacterTex)[key].first], sizePIC, &ADD);
-
+	SDL_Rect ADD = { Address.x - Screen1.first.x, Address.y - Screen1.first.y, Address.w, Address.h };
+	ADD = tien_ich.nhan(ADD, Screen1.second);
+	SDL_RenderCopy(render, input[sizePIC].first.reTEX(), sizePIC, &ADD);
 }
 
 void GameCharacter::update(char key, bool check)
@@ -89,6 +86,7 @@ void GameCharacter::update(char key, bool check)
 		input[sizePIC].first.checkDOWN(key);
 	else
 		input[sizePIC].first.checkUP(key);
+
 	if (input[sizePIC].first.Getspeedx())input[sizePIC].second.resetX();
 	if (input[sizePIC].first.Getspeedg())input[sizePIC].second.resetG();
 

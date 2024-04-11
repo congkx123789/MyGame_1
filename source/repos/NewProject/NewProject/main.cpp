@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
 
 	int frameTime;
 
-	game->init("Hello world", 1200, 800, 0);
+	game->init("Hello world", 1024, 576, 0);
 
 	cout << "running" << endl;
 
@@ -36,13 +36,9 @@ int main(int argc, char* argv[]) {
 
 		frameTime = SDL_GetTicks() - frameStart;
 
-		//		 SDL_Delay(5000);
-
 		if (frameDelay > frameTime) {
 
 			SDL_Delay(frameDelay - frameTime);
-			//https://www.youtube.com/watch?v=jzasDqPmtPI&list=PLhfAbcv9cehhkG7ZQK0nfIGJC_C-wSLrx&index=5 
-			// I learn FPS in this video
 		}
 		game->SetTime(SDL_GetTicks());
 

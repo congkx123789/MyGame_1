@@ -1,0 +1,4 @@
+3
+Leftplayer/adventurer-hurt-00.png
+Leftplayer/adventurer-hurt-01.png
+Leftplayer/adventurer-hurt-02.png

@@ -1,0 +1,4 @@
+3
+player/adventurer-air-attack3-loop-00.png
+player/adventurer-air-attack3-loop-01.png
+player/adventurer-air-attack3-rdy-00.png

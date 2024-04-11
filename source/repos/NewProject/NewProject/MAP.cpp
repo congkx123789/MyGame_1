@@ -8,7 +8,7 @@ map<int, vector<SDL_Rect>> mapG;
 
 SDL_Rect add;
 
-MAP::MAP(const char* tittle, SDL_Renderer* render, SDL_Rect screen)
+MAP::MAP(const char* tittle, const char* file, SDL_Renderer* render, SDL_Rect screen)
 {
 	add.w = 32;
 	add.h = 32;
@@ -25,9 +25,7 @@ MAP::MAP(const char* tittle, SDL_Renderer* render, SDL_Rect screen)
 		cout << s << endl;
 		wall[i] = func1.Manager_Texture(s.c_str(), renderer);
 	}
-
 	int a;
-
 	for (int i = 0; i < n; i++) {
 		readfile >> a;
 		cout << a << endl;
@@ -37,38 +35,56 @@ MAP::MAP(const char* tittle, SDL_Renderer* render, SDL_Rect screen)
 
 			mapGame[i].push_back(add);
 		}
-
 	}
 	readfile.close();
+	ifstream file1(file);
+	file1 >> s;
+
+	BackGround = func1.Manager_Texture(s.c_str(), renderer);
+	file1 >> BackGR.w >> BackGR.h;
+
+	file1.close();
+
 }//0
 
 void MAP::RenderCP()
 {
+	SDL_RenderCopy(renderer, BackGround, &now, NULL);
+
 	SDL_Rect red;
 	int a = 0;
 	for (auto i : mapG) {
 		for (int j = 0; j < i.second.size(); j++) {
-			red = i.second[j];
-			red.x -= x;
-			red.y -= y;
+			red = func1.nhan({ i.second[j].x - now.x, i.second[j].y - now.y, i.second[j].w, i.second[j].h }, docheck);
+
 			SDL_RenderCopy(renderer, wall[a], NULL, &red);
 		}
 		a++;
 	}
+
 	mapG.clear();
 }//3
 
-void MAP::updateVector(SDL_Rect old)
+void MAP::updateVector(SDL_Rect gop)
 {
-	if (old.x >= 0 && old.x <= Screen.w / 2)x = 0;
-	else x = old.x - Screen.w / 2;
-	if (old.y >= Screen.h / 2 && old.y <= Screen.h)y = 0;
-	else y = old.y - Screen.h / 2;
+	SDL_Rect gop1 = { gop.x,gop.y,gop.w,gop.h + 32 };
+
+	double w = gop1.w, h = gop1.h;
+
+	if (16.0 / 9.0 > w / h) w = h / 9.0 * 16.0;
+	else h = w / 16.0 * 9.0;
+
+	if (h < Screen.h / 2) { w = Screen.w / 2; h = Screen.h / 2; }
+	SDL_Rect huge = gop1;
+	huge.w = w; huge.h = h;
+
+	now = func1.center(gop1, huge, BackGR);
+	docheck = func1.chia(Screen.w, now.w);
 }
 
 SDL_Rect MAP::coll(SDL_Rect check, SDL_Rect old)
 {
-	SDL_Rect a1 = { min(check.x,old.x),min(check.y,old.y),check.w + abs(check.x - old.x),check.h + abs(check.y - old.y) };
+	SDL_Rect a1 = func1.gop(old, check);
 	vector<SDL_Rect> ok;
 	for (auto i : mapG) {
 		for (int j = 0; j < i.second.size(); j++) {
@@ -113,28 +129,26 @@ SDL_Rect MAP::coll(SDL_Rect check, SDL_Rect old)
 
 	func1.lamtron();
 	a1.x = func1.reDoubleF();
-	if (a1.x < 0)a1.x = 0;
-	if (a1.y > Screen.h)a1.y = 0;
+	a1.x = max(a1.x, 0);
+	a1.y = max(a1.y, 0);
+	a1.x = min(a1.x, BackGR.w - a1.w);
+	a1.y = min(a1.y, BackGR.h - a1.h);
 	return a1;
 }//2
 
 void MAP::update()
 {
-	add.w = 32;
-	add.h = 32;
+
 	int a = 0;
 	for (auto i : mapGame) {
 		add.w = i.second[0].w;
 		add.h = i.second[0].h;
 		for (int j = 0; j < i.second.size(); j++) {
-			//if (i.second[j].x + 32 > Screen.x + x && i.second[j].x < Screen.x + Screen.w + x)
-			//{
-			//	if (i.second[j].y + 32 > Screen.y + y && i.second[j].y < Screen.y + Screen.h + y) {
-			add.x = i.second[j].x;
-			add.y = i.second[j].y;
-			mapG[a].push_back(add);
-			//	}
-			//}
+			if (i.second[j].x + 32 >= now.x && i.second[j].x <= now.x + now.w) {
+				if (i.second[j].y + 32 >= now.y && i.second[j].y <= now.y + now.h) {
+					mapG[a].push_back(i.second[j]);
+				}
+			}
 		}
 		a++;
 	}

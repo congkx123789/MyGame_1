@@ -1,4 +1,13 @@
 #include"function1.h"
+int lamtr(double a) {
+
+
+    if (a - int(a) > 0.5)
+        a = int(a) + 1;
+    else
+        a = int(a);
+    return a;
+}
 
 bool checkSDL(pair<double, double> check, double w, double h, SDL_Rect add)
 {
@@ -62,5 +71,37 @@ void function1::answer1(SDL_Rect add, double w, double h)
 bool function1::checkDouble(double w, double h, SDL_Rect add)
 {
     return checkSDL(make_pair(first1, second1), w, h, add);
+}
+
+SDL_Rect function1::center(SDL_Rect little1, SDL_Rect huge, SDL_Rect BackGR)
+{
+    SDL_Rect b = huge;
+    double a = huge.w - little1.w;
+    a /= 2.0;
+    b.x = little1.x - a;
+    a = huge.h - little1.h;
+    a /= 2.0;
+    b.y = little1.y - a;
+    b.x = max(b.x, 0);
+    b.y = max(b.y, 0);
+    b.x = min(b.x, BackGR.w - b.w);
+    b.y = min(b.y, BackGR.h - b.h);
+    return b;
+}
+
+SDL_Rect function1::nhan(SDL_Rect hazz, double ab)
+{
+    double a = hazz.x;
+    hazz.x = lamtr(hazz.x * ab);
+    hazz.w = hazz.w * ab + 2;
+    hazz.h = hazz.h * ab + 2;
+    hazz.y = lamtr(hazz.y * ab);
+    return hazz;
+}
+
+double function1::chia(int a, int b)
+{
+    double a1 = a, b1 = b;
+    return a1 / b1;
 }
 
