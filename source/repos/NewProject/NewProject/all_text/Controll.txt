@@ -1,4 +1,4 @@
-22
+20
 animationManager/run.txt d
 animationManager/runleft.txt a
 animationManager/basis.txt +
@@ -9,8 +9,6 @@ animationManager/Air1.txt 0
 animationManager/Air1Left.txt 1 
 animationManager/Air2.txt 2
 animationManager/Air2Left.txt 3
-animationManager/Air3.txt 4
-animationManager/Air3Left.txt 5
 animationManager/AirLoop.txt 6
 animationManager/AirLoopLeft.txt 7
 animationManager/Attack1.txt z
@@ -21,6 +19,4 @@ animationManager/Attack3.txt c
 animationManager/Attack3Left.txt C
 animationManager/hurt.txt h
 animationManager/hurtLeft.txt H
-
-
-
+playertool/health.png

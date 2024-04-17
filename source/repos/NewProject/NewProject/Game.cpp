@@ -7,6 +7,10 @@ GameCharacter* testplayer;
 MAP* background;
 
 function1 func11;
+phantich *a123;
+
+man_hinh_cho *Man_Hinh;
+
 void My_Game::init(const char* tittle, int xrow, int ycolum, bool Full_Screen) {
 
 	Uint32 FullScreen1 = 0;
@@ -19,13 +23,24 @@ void My_Game::init(const char* tittle, int xrow, int ycolum, bool Full_Screen) {
 	cout << "SYSTEMS INITIALIZED!" << endl;
 
 	Screen = { 0,0,xrow,ycolum };
+	//main
+	mainplayer = new GameCharacter("all_text/Controll.txt", renderer,TIMENOW, 0, 0);
+	testplayer = new GameCharacter("all_text/Controll.txt", renderer, TIMENOW, xrow/2, 0);
+	//background
+	background = new MAP("all_text/map.txt","all_text/Backgr.txt", renderer, Screen);
 
-	mainplayer = new GameCharacter("Controll.txt", renderer, 0, 0);
-	testplayer = new GameCharacter("Controll.txt", renderer, 600, 0);
+	//Set Man hinh cho
+	Man_Hinh = new man_hinh_cho("all_text/man_hinh_cho.txt", renderer, Screen);
 
-	background = new MAP("map.txt", "Backgr.txt", renderer, Screen);
-
+	//set phantich
+	a123->set_all("all_text/alltext.txt","all_text/sat.txt"); delete a123;
+	
 	cout << "LOADED IMAGE!" << endl;
+}
+
+bool My_Game::man_hinh()
+{
+	return Man_Hinh->man_hinh_cho_1();
 }
 
 void My_Game::render1()
@@ -33,20 +48,99 @@ void My_Game::render1()
 	SDL_RenderClear(renderer);
 
 	background->RenderCP();
-
-	mainplayer->render1(background->VeX());
-	testplayer->render1(background->VeX());
-
+	if (ren) {
+		mainplayer->render1(background->VeX());
+		testplayer->render1(background->VeX());
+	}
+	else {
+		testplayer->render1(background->VeX());
+		mainplayer->render1(background->VeX());
+	}
 	SDL_RenderPresent(renderer);
+}
+
+void My_Game::analy()
+{
+	//backgournd
+	background->updateVector(func11.gop(mainplayer->GetADD(), testplayer->GetADD()));
+	background->update();
+
+	//main
+	mainplayer->check();
+	mainplayer->resetSPE( background->coll(mainplayer->GetTA(), mainplayer->GetADD()) );
+	
+	testplayer->check();
+	testplayer->resetSPE( background->coll(testplayer->GetTA(), testplayer->GetADD()) );
+}
+
+void My_Game::analy1()
+{
+	pair<SDL_Rect, pair<int, SDL_Rect>> main_Player = mainplayer->Set_Imae();
+	pair<SDL_Rect, pair<int, SDL_Rect>> test_Player = testplayer->Set_Imae();
+
+	bool b = func11.checkSDL1(test_Player.second.second , main_Player.first) == 0 ;
+	bool a = func11.checkSDL1(main_Player.second.second, test_Player.first) == 0 ;
+
+	if (a && b && main_Player.second.first>0 && test_Player.second.first>0) {
+		ren = 1;
+	}
+	else if (a && main_Player.second.first > 0) {
+		ren = 0; 
+		testplayer->effect(main_Player.second.first);
+	}
+	else if (b && test_Player.second.first > 0) {
+		ren = 1;
+		mainplayer->effect(test_Player.second.first);
+	}
+	else {
+		ren = 1;
+	}
+}
+
+void My_Game::change()
+{
+	if (*TIMENOW - testplayer->getTIMEOLD() > 0.05){
+		testplayer->GetTIMEold();
+		mainplayer->GetTIMEold();
+	}
+	//testplayer->GetTIME(*TIMENOW);
+	//mainplayer->GetTIME(*TIMENOW);
+}
+
+void My_Game::ALLold()
+{
+	testplayer->GetTIMEold();
+	mainplayer->GetTIMEold();
+}
+
+void My_Game::return_All_time()
+{
+	mainplayer->GetTIMEold();
+	testplayer->GetTIMEold();
+
+	background->GetScreen(Screen);
+}
+
+void My_Game::Systems_Clear()
+{
+	delete mainplayer;
+	delete testplayer;
+	delete background;
+	SDL_DestroyWindow(window);
+	SDL_DestroyRenderer(renderer);
+	SDL_Quit();
+	cout << "SYSTEMS DESTROYED!" << endl;
 }
 
 bool My_Game::running1()
 {
+	int loai;
 	SDL_PollEvent(&event);
 	if (event.type == SDL_QUIT)
 		return false;
 	else if (event.type == SDL_KEYDOWN) {
 		switch (event.key.keysym.sym) {
+			cout << event.key.keysym.sym << endl;
 		case SDLK_a:
 			mainplayer->update('a', 1);
 			break;
@@ -94,6 +188,15 @@ bool My_Game::running1()
 			break;
 		case 1073741917:
 			testplayer->update('i', 1);
+			break;
+		case 27:
+			loai = Man_Hinh->man_hinh_cho_2(1);
+			if (loai == 0)return false;
+			else if (loai == 1) {
+				mainplayer->return_ALL();
+				testplayer->return_ALL();
+			}
+			event.type = SDL_KEYUP;
 			break;
 		default:
 			break;
@@ -154,56 +257,13 @@ bool My_Game::running1()
 			break;
 		}
 	}
-	return true;
-
-}
-
-void My_Game::analy()
-{
-	//backgournd
-	background->updateVector(func11.gop(mainplayer->GetADD(), testplayer->GetADD()));
-	background->update();
-
-	//main
-	mainplayer->check();
-	mainplayer->resetSPE(background->coll(mainplayer->GetTA(), mainplayer->GetADD()));
-
-	testplayer->check();
-	testplayer->resetSPE(background->coll(testplayer->GetTA(), testplayer->GetADD()));
-
-
-}
-
-void My_Game::change()
-{
-	testplayer->GetTIME(TIMENOW);
-	mainplayer->GetTIME(TIMENOW);
-}
-
-void My_Game::ALLold()
-{
-	testplayer->GetTIMEold();
-	mainplayer->GetTIMEold();
-}
-
-void My_Game::return_All_time()
-{
-	mainplayer->GetTIME(TIMENOW);
-	mainplayer->GetTIMEold();
-
-	testplayer->GetTIME(TIMENOW);
-	testplayer->GetTIMEold();
-	background->GetScreen(Screen);
-
-}
-
-void My_Game::Systems_Clear()
-{
-	delete mainplayer;
-	delete testplayer;
-	delete background;
-	SDL_DestroyWindow(window);
-	SDL_DestroyRenderer(renderer);
-	SDL_Quit();
-	cout << "SYSTEMS DESTROYED!" << endl;
+	if (mainplayer->runni() && testplayer->runni())	return true;
+	else {
+		if (Man_Hinh->man_hinh_cho_2(0) == 1) {
+			mainplayer->return_ALL();
+			testplayer->return_ALL();
+			return 1;
+		}
+		else return 0;
+	}
 }

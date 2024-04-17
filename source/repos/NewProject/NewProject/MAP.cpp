@@ -8,7 +8,7 @@ map<int, vector<SDL_Rect>> mapG;
 
 SDL_Rect add;
 
-MAP::MAP(const char* tittle, const char* file, SDL_Renderer* render, SDL_Rect screen)
+MAP::MAP(const char* tittle,const char* file, SDL_Renderer* render, SDL_Rect screen)
 {
 	add.w = 32;
 	add.h = 32;
@@ -55,36 +55,34 @@ void MAP::RenderCP()
 	int a = 0;
 	for (auto i : mapG) {
 		for (int j = 0; j < i.second.size(); j++) {
-			red = func1.nhan({ i.second[j].x - now.x, i.second[j].y - now.y, i.second[j].w, i.second[j].h }, docheck);
+			red = func1.nhan({ i.second[j].x - now.x, i.second[j].y - now.y, i.second[j].w, i.second[j].h },docheck);
 
 			SDL_RenderCopy(renderer, wall[a], NULL, &red);
 		}
 		a++;
 	}
-
+	
 	mapG.clear();
 }//3
 
 void MAP::updateVector(SDL_Rect gop)
 {
-	SDL_Rect gop1 = { gop.x,gop.y,gop.w,gop.h + 32 };
-
+	SDL_Rect gop1 = { gop.x-32,gop.y -32,gop.w+64,gop.h+64};
+	gop1 = func1.checkSDL0(gop1, BackGR);
 	double w = gop1.w, h = gop1.h;
-
 	if (16.0 / 9.0 > w / h) w = h / 9.0 * 16.0;
 	else h = w / 16.0 * 9.0;
-
-	if (h < Screen.h / 2) { w = Screen.w / 2; h = Screen.h / 2; }
+	if (h < Screen.h*2 / 3) { w = Screen.w*2 / 3; h = Screen.h*2 / 3; }
 	SDL_Rect huge = gop1;
 	huge.w = w; huge.h = h;
 
-	now = func1.center(gop1, huge, BackGR);
+	now = func1.center(gop1, huge,BackGR);
 	docheck = func1.chia(Screen.w, now.w);
 }
 
 SDL_Rect MAP::coll(SDL_Rect check, SDL_Rect old)
 {
-	SDL_Rect a1 = func1.gop(old, check);
+	SDL_Rect a1 = func1.gop(old,check);
 	vector<SDL_Rect> ok;
 	for (auto i : mapG) {
 		for (int j = 0; j < i.second.size(); j++) {
@@ -144,8 +142,8 @@ void MAP::update()
 		add.w = i.second[0].w;
 		add.h = i.second[0].h;
 		for (int j = 0; j < i.second.size(); j++) {
-			if (i.second[j].x + 32 >= now.x && i.second[j].x <= now.x + now.w) {
-				if (i.second[j].y + 32 >= now.y && i.second[j].y <= now.y + now.h) {
+			if (i.second[j].x + 32 > now.x && i.second[j].x < now.x + now.w) {
+				if (i.second[j].y + 32 > now.y && i.second[j].y < now.y + now.h) {
 					mapG[a].push_back(i.second[j]);
 				}
 			}

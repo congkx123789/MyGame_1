@@ -9,7 +9,7 @@ public:
 
 	void RenderCP();
 
-	void GetScreen(SDL_Rect screen) { Screen = screen; }
+	void GetScreen(SDL_Rect screen) {Screen = screen;}
 
 	void updateVector(SDL_Rect gop);
 
@@ -25,7 +25,7 @@ private:
 	SDL_Texture** wall;
 	double docheck;
 	SDL_Texture* BackGround;
-	SDL_Rect BackGR = { 0,0,0,0 };
+	SDL_Rect BackGR = {0,0,0,0};
 	SDL_Rect now;
 };
 

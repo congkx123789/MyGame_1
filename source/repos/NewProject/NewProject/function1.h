@@ -1,6 +1,6 @@
 #pragma once
 #include"Game.h"
-
+using namespace std;
 class function1
 {
 public:
@@ -54,21 +54,29 @@ public:
 			second1 = int(second1);
 		if (check1) second1 = second1 * (-1.0);
 	}
-
+	 
 	SDL_Rect gop(SDL_Rect old, SDL_Rect check) { return { min(check.x,old.x),min(check.y,old.y),check.w + abs(check.x - old.x),check.h + abs(check.y - old.y) }; }
 
-	SDL_Rect center(SDL_Rect little1, SDL_Rect huge, SDL_Rect BackGR);
+	SDL_Rect center(SDL_Rect little1, SDL_Rect huge,SDL_Rect BackGR);
 
-	SDL_Rect nhan(SDL_Rect hazz, double ab);
-
+	SDL_Rect nhan(SDL_Rect hazz,double ab);
 	double chia(int a, int b);
+	SDL_Rect congSDL(SDL_Rect basis, SDL_Rect cong_SDL);
 
+	SDL_Rect checkSDL0(SDL_Rect a,SDL_Rect backGR) {
+		if (a.w > backGR.w)a.w = backGR.w;
+		if (a.h > backGR.h)a.h = backGR.h;
+		if (a.x < 0)a.x = 0;
+		if (a.y < 0)a.y = 0;
+		if (a.x + a.w > backGR.w)a.x = backGR.w - a.w;
+		if (a.y + a.h > backGR.h)a.y = backGR.h - a.h;
+		return a;
+	}
 
+	bool check_man_hinh_Rect(pair<int, int> motion, SDL_Rect button);
 private:
-
 	double first1;
 	double second1;
 	SDL_Rect old;
-
 };
 

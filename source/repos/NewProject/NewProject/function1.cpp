@@ -73,7 +73,7 @@ bool function1::checkDouble(double w, double h, SDL_Rect add)
     return checkSDL(make_pair(first1, second1), w, h, add);
 }
 
-SDL_Rect function1::center(SDL_Rect little1, SDL_Rect huge, SDL_Rect BackGR)
+SDL_Rect function1::center(SDL_Rect little1, SDL_Rect huge,SDL_Rect BackGR)
 {
     SDL_Rect b = huge;
     double a = huge.w - little1.w;
@@ -92,9 +92,13 @@ SDL_Rect function1::center(SDL_Rect little1, SDL_Rect huge, SDL_Rect BackGR)
 SDL_Rect function1::nhan(SDL_Rect hazz, double ab)
 {
     double a = hazz.x;
-    hazz.x = lamtr(hazz.x * ab);
-    hazz.w = hazz.w * ab + 2;
-    hazz.h = hazz.h * ab + 2;
+    hazz.x =lamtr(hazz.x * ab);
+    a = hazz.w * ab;
+    if (a == int(a)) hazz.w = a;
+    else hazz.w = a + 2;
+    a = hazz.h * ab;
+    if (a == int(a)) hazz.h= a;
+    else hazz.h = a + 2;
     hazz.y = lamtr(hazz.y * ab);
     return hazz;
 }
@@ -105,3 +109,15 @@ double function1::chia(int a, int b)
     return a1 / b1;
 }
 
+SDL_Rect function1::congSDL(SDL_Rect basis, SDL_Rect cong_SDL)
+{
+    return { basis.x + cong_SDL.x*2,basis.y + cong_SDL.y*2,cong_SDL.w*2,cong_SDL.h*2 };
+}
+
+bool function1::check_man_hinh_Rect(pair<int, int> motion, SDL_Rect button)
+{
+    if (motion.first >= button.x && motion.first <= button.x + button.w) 
+        if (motion.second >= button.y && motion.second <= button.h + button.y)
+            return 1;
+    return 0;
+}

@@ -4,30 +4,30 @@ class speed
 {
 public:
 
-	int runright(double TIMEnow, double TIMEold);
+	int runright(double TIMEnow, double TIMEold,int g);
 
-	int down(double TIMEnow, double TIMEold);
+	int down(double TIMEnow, double TIMEold,int g);
 
-	int jumb();
+	int jumb(int g);
 
 	void resetG() { SpeedG = 0; }
 
 	void resetX() { SpeedX = 0; }
-
+	
 private:
 
 	double SpeedG = 0;
 
 	double SpeedX = 0;
-
+	
 	double run = 0;
 	double run1 = 0;
 
 	double x = 0;
 
-	double g = 1500;
+	//double g = 1500;
 
-	double g2 = 10000;
+	//double g2 = 10000;
 
-	double g1 = -200000;
+	//double g1 = -200000;
 };

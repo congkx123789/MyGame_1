@@ -144,6 +144,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameCharacter.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="man_hinh_cho.cpp" />
     <ClCompile Include="MAP.cpp" />
     <ClCompile Include="phantich.cpp" />
     <ClCompile Include="speed.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="function1.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameCharacter.h" />
+    <ClInclude Include="man_hinh_cho.h" />
     <ClInclude Include="MAP.h" />
     <ClInclude Include="phantich.h" />
     <ClInclude Include="speed.h" />

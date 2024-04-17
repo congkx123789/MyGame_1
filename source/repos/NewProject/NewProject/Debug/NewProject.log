@@ -1,7 +1,31 @@
-﻿  function1.cpp
+﻿  animation.cpp
+  function1.cpp
 C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(9,12): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
 C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(81,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(84,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(96,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(97,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(97,31): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(98,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(100,30): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(101,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Game.cpp
+  GameCharacter.cpp
+C:\Users\havuc\source\repos\NewProject\NewProject\GameCharacter.cpp(97,13): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\GameCharacter.cpp(98,14): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+  man_hinh_cho.cpp
+  MAP.cpp
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(57,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(77,11): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(77,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(88,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(96,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(97,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(109,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(110,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(120,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(121,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(144,21): warning C4018: '<': signed/unsigned mismatch
+  phantich.cpp
+  speed.cpp
+  Generating Code...
   NewProject.vcxproj -> C:\Users\havuc\source\repos\NewProject\Debug\NewProject.exe

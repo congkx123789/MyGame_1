@@ -1,4 +1,7 @@
-3
+6
 Leftplayer/adventurer-air-attack3-loop-00.png
 Leftplayer/adventurer-air-attack3-loop-01.png
 Leftplayer/adventurer-air-attack3-rdy-00.png
+Leftplayer/adventurer-air-attack-3-end-00.png
+Leftplayer/adventurer-air-attack-3-end-01.png
+Leftplayer/adventurer-air-attack-3-end-02.png
