@@ -26,10 +26,13 @@ int main(int argc, char* argv[]) {
 	while (game->running1()) {
 
 		frameStart = SDL_GetTicks();
+		
 		game->change();
 		
 		game->analy();
+
 		game->analy1();
+		
 		game->render1();
 
 		game->ALLold();

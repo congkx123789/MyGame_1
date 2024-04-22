@@ -40,7 +40,7 @@ void phantich::set_all(const char* file, const char* file2)
 
 void phantich::set_mainTex(char a, int b)
 {
-	mainTex = (*CharacterTex)[a].second[b]; 
+	mainTex = (*CharacterTex)[a].second[b];
 	Sat_th = Sat_thuong[a][b];
 	return;
 }
@@ -48,7 +48,8 @@ void phantich::set_mainTex(char a, int b)
 void phantich::check(char a, int b)
 {
 	bool fin = 0;
-	if (animtion_Char[CharacterTex][a].reDONE() || ( b==1 && jumb)) fin = 1;
+	if (animtion_Char[CharacterTex][a].reDONE() || (b == 1 && jumb)) fin = 1;
+	if(oldchar)
 	if (input['x'])fin = 1;
 	if (fin) {
 		animtion_Char[CharacterTex].erase(a);
@@ -68,14 +69,14 @@ void phantich::check(char a, int b)
 
 bool phantich::check1()
 {
-	if(oldchar)
-	if ((*oldchar == '7' || *oldchar == '6') && jumb)return 1;
-	if(oldchar1)
-	if ((*oldchar1 == 'k' || *oldchar1 == 'K') && jumb)return 1;
+	if (oldchar)
+		if ((*oldchar == '7' || *oldchar == '6') && jumb)return 1;
+	if (oldchar1)
+		if ((*oldchar1 == 'k' || *oldchar1 == 'K') && jumb)return 1;
 	return 0;
 }
 
-void phantich::new_charchec(char a,int b)
+void phantich::new_charchec(char a, int b)
 {
 	switch (b) {
 	case 0:
@@ -87,7 +88,7 @@ void phantich::new_charchec(char a,int b)
 		oldchar1 = new char(a);
 		break;
 	case 2:
-		
+
 		animtion_Char[CharacterTex][a].setall(key[a], (*CharacterTex)[a].first, *TIMENOW);
 		oldchar2 = new char(a);
 		break;
@@ -156,9 +157,9 @@ void phantich::Charac()
 	if (oldchar) {
 		Tex = animtion_Char[CharacterTex][*oldchar].ans(*TIMENOW);
 		check(*oldchar, 0);
-		if(oldchar){
+		if (oldchar) {
 			if (check1())	animtion_Char[CharacterTex][*oldchar].setloop1();
-			set_mainTex(*oldchar,Tex);
+			set_mainTex(*oldchar, Tex);
 			return;
 		}
 	}
@@ -200,7 +201,7 @@ void phantich::Charac()
 	if (oldchar1) {
 		Tex = animtion_Char[CharacterTex][*oldchar1].ans(*TIMENOW);
 		check(*oldchar1, 1);
-		if(oldchar1){
+		if (oldchar1) {
 			if (check1())	animtion_Char[CharacterTex][*oldchar1].setloop1();
 			set_mainTex(*oldchar1, Tex);
 			return;

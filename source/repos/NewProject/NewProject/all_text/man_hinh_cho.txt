@@ -1,6 +1,9 @@
 playertool/exit.png 0 0 300 100
-playertool/start.png 0 300 300 100
-playertool/resume.png 0 200 300 100
+playertool/start.png 0 150 300 100
+playertool/resume.png 0 150 300 100
 playertool/restart.png 0 0 300 100
-playertool/EXIT_2.png 0 400 300 100
+playertool/EXIT_2.png 0 300 300 100
+playertool/menu.png 0 450 100 100
+playertool/tutorial.png 0 450 100 100
+playertool/tutorial_image.png
 playertool/man_cho.jpg

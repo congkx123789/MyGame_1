@@ -11,11 +11,11 @@ public:
 	void set_all(const char* file, const char* file2);
 	bool Getspeedx() { return speedx; }
 	bool Getspeedg() { return speedg; }
-	void check(char a,int b);
+	void check(char a, int b);
 	bool check1();
 	bool Get_Jumb() { return jumb; }
 
-	void  new_charchec(char a,int b);
+	void  new_charchec(char a, int b);
 
 	void checkDOWN(char down);
 
@@ -47,7 +47,7 @@ public:
 	}
 
 private:
-	double *TIMENOW;
+	double* TIMENOW;
 	bool jumb = 0;
 	bool speedx = 0;
 	bool speedg = 0;
@@ -57,10 +57,10 @@ private:
 
 	map<char, bool> output;
 	SDL_Texture* mainTex;
-	map<char,pair<int, SDL_Texture**>>* CharacterTex = nullptr;
+	map<char, pair<int, SDL_Texture**>>* CharacterTex = nullptr;
 	pair<int, SDL_Rect> Sat_th;
 
-	char *oldchar = nullptr;
+	char* oldchar = nullptr;
 	char* oldchar1 = nullptr;
 	char* oldchar2 = nullptr;
 

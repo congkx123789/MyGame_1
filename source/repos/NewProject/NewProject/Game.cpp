@@ -7,9 +7,9 @@ GameCharacter* testplayer;
 MAP* background;
 
 function1 func11;
-phantich *a123;
+phantich* a123;
 
-man_hinh_cho *Man_Hinh;
+man_hinh_cho* Man_Hinh;
 
 void My_Game::init(const char* tittle, int xrow, int ycolum, bool Full_Screen) {
 
@@ -19,22 +19,22 @@ void My_Game::init(const char* tittle, int xrow, int ycolum, bool Full_Screen) {
 	SDL_Init(SDL_INIT_VIDEO);
 	window = SDL_CreateWindow(tittle, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, xrow, ycolum, FullScreen1);
 	renderer = SDL_CreateRenderer(window, -1, 0);
-	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+	//SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 	cout << "SYSTEMS INITIALIZED!" << endl;
 
 	Screen = { 0,0,xrow,ycolum };
 	//main
-	mainplayer = new GameCharacter("all_text/Controll.txt", renderer,TIMENOW, 0, 0);
-	testplayer = new GameCharacter("all_text/Controll.txt", renderer, TIMENOW, xrow/2, 0);
+	mainplayer = new GameCharacter("all_text/Controll.txt", renderer, TIMENOW, 0, 0);
+	testplayer = new GameCharacter("all_text/Controll.txt", renderer, TIMENOW, xrow / 2, 0);
 	//background
-	background = new MAP("all_text/map.txt","all_text/Backgr.txt", renderer, Screen);
+	background = new MAP("all_text/map.txt", "all_text/Backgr.txt", renderer, Screen, TIMENOW);
 
 	//Set Man hinh cho
 	Man_Hinh = new man_hinh_cho("all_text/man_hinh_cho.txt", renderer, Screen);
 
 	//set phantich
-	a123->set_all("all_text/alltext.txt","all_text/sat.txt"); delete a123;
-	
+	a123->set_all("all_text/alltext.txt", "all_text/sat.txt"); delete a123;
+
 	cout << "LOADED IMAGE!" << endl;
 }
 
@@ -67,10 +67,10 @@ void My_Game::analy()
 
 	//main
 	mainplayer->check();
-	mainplayer->resetSPE( background->coll(mainplayer->GetTA(), mainplayer->GetADD()) );
-	
+	mainplayer->resetSPE(background->coll(mainplayer->GetTA(), mainplayer->GetADD()));
+
 	testplayer->check();
-	testplayer->resetSPE( background->coll(testplayer->GetTA(), testplayer->GetADD()) );
+	testplayer->resetSPE(background->coll(testplayer->GetTA(), testplayer->GetADD()));
 }
 
 void My_Game::analy1()
@@ -78,14 +78,14 @@ void My_Game::analy1()
 	pair<SDL_Rect, pair<int, SDL_Rect>> main_Player = mainplayer->Set_Imae();
 	pair<SDL_Rect, pair<int, SDL_Rect>> test_Player = testplayer->Set_Imae();
 
-	bool b = func11.checkSDL1(test_Player.second.second , main_Player.first) == 0 ;
-	bool a = func11.checkSDL1(main_Player.second.second, test_Player.first) == 0 ;
+	bool b = func11.checkSDL1(test_Player.second.second, main_Player.first) == 0;
+	bool a = func11.checkSDL1(main_Player.second.second, test_Player.first) == 0;
 
-	if (a && b && main_Player.second.first>0 && test_Player.second.first>0) {
+	if (a && b && main_Player.second.first > 0 && test_Player.second.first > 0) {
 		ren = 1;
 	}
 	else if (a && main_Player.second.first > 0) {
-		ren = 0; 
+		ren = 0;
 		testplayer->effect(main_Player.second.first);
 	}
 	else if (b && test_Player.second.first > 0) {
@@ -99,7 +99,7 @@ void My_Game::analy1()
 
 void My_Game::change()
 {
-	if (*TIMENOW - testplayer->getTIMEOLD() > 0.05){
+	if (*TIMENOW - testplayer->getTIMEOLD() > 0.05) {
 		testplayer->GetTIMEold();
 		mainplayer->GetTIMEold();
 	}
@@ -189,6 +189,12 @@ bool My_Game::running1()
 		case 1073741917:
 			testplayer->update('i', 1);
 			break;
+		case SDLK_x:
+			mainplayer->update('x', 1);
+			break;
+		case 1073741922:
+			testplayer->update('x', 1);
+			break;
 		case 27:
 			loai = Man_Hinh->man_hinh_cho_2(1);
 			if (loai == 0)return false;
@@ -252,6 +258,12 @@ bool My_Game::running1()
 			break;
 		case 1073741917:
 			testplayer->update('i', 0);
+			break;
+		case SDLK_x:
+			mainplayer->update('x', 0);
+			break;
+		case 1073741922:
+			testplayer->update('x', 0);
 			break;
 		default:
 			break;

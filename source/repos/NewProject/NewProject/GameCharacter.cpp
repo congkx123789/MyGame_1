@@ -31,7 +31,6 @@ GameCharacter::GameCharacter(const char* file, SDL_Renderer* renderer, double* t
 
 		(*CharacterTex)[key].second = new SDL_Texture * [n1];
 		(*CharacterTex)[key].first = n1;
-		cout << key << endl;
 		for (int i = 0; i < n1; i++) {
 			readmyfile >> b;
 

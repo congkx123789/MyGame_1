@@ -2,7 +2,7 @@
 #include "Game.h"
 using namespace std;
 
-class GameCharacter {
+class GameCharacter{
 public:
     GameCharacter(const char* tittleofsheet, SDL_Renderer* renderer,double *time, int x, int y);
     bool ch(char check1);
