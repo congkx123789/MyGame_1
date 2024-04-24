@@ -18,3 +18,6 @@ Trò chơi cũng không phải quá hay lắm, nhưng rất mong các bạn chơ
 [(35) Let's Make Games - YouTube](https://www.youtube.com/@CarlBirch)
 
 Etc…
+**Nguồn ảnh:**
+[LINK](https://www.youtube.com/@CarlBirch)
+
