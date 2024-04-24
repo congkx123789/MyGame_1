@@ -20,5 +20,5 @@ Trò chơi cũng không phải quá hay lắm, nhưng rất mong các bạn chơ
 Etc…
 
 **Nguồn ảnh:**
-[LINK]([https://www.youtube.com/@CarlBirch](https://glusoft.com/sdl2-tutorials/sprite-animations-sdl/))
+[LINK](https://glusoft.com/sdl2-tutorials/sprite-animations-sdl/)
 
