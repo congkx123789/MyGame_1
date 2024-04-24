@@ -55,11 +55,11 @@ pair<pair<double, double>, pair<double, double>> MAP::giam_dan(pair<pair<double,
 	double w = abs(a.first.first + a.second.first - b.first.first - b.second.first); if (w < 0.00001)w = 0;
 	double h = abs(a.first.second + a.second.second - b.first.second - b.second.second); if (h < 0.00001) h = 0;
 
-	double a1 = 960.0;
-	double b1 = 540.0;
+	//double a1 = 960.0;
+	//double b1 = 540.0;
 
-	//double a1 = 640.0;
-	//double b1 = 360.0;
+	double a1 = 640.0;
+	double b1 = 360.0;
 	if (time_check <= 0) {
 		if (x != 0) {
 			a.first.first += min(x, a1 / (x + w) * x * time);
@@ -88,10 +88,9 @@ void MAP::Get_now_Screen(pair<pair<double, double>, pair<double, double>> a)
 	pair<pair<double, double>, pair<double, double>> check = now_double;
 	now_double = func1.lan_double(a, now_double, BackGR);
 
-	if (abs(check.second.first - now_double.second.first) > 0.0001 && now_double.second.first > check.second.first) time_check = 0.2;
-
 	now_double = giam_dan(now_double, a, *TIME - TIMEold);
 
+	if (abs(check.second.first - now_double.second.first) > 0.0001 && now_double.second.first > check.second.first) time_check = 0.2;
 
 	now = { int(now_double.first.first),int(now_double.first.second),int(now_double.second.first),int(now_double.second.second) };
 	return;

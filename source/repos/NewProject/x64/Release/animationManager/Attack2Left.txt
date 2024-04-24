@@ -1,0 +1,7 @@
+6
+Leftplayer/adventurer-attack2-00.png
+Leftplayer/adventurer-attack2-01.png
+Leftplayer/adventurer-attack2-02.png
+Leftplayer/adventurer-attack2-03.png
+Leftplayer/adventurer-attack2-04.png
+Leftplayer/adventurer-attack2-05.png

@@ -1,0 +1,21 @@
+﻿  animation.cpp
+  function1.cpp
+C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(10,9): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(103,28): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(104,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(106,28): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\function1.cpp(107,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Game.cpp
+  GameCharacter.cpp
+C:\Users\havuc\source\repos\NewProject\NewProject\GameCharacter.cpp(96,13): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+C:\Users\havuc\source\repos\NewProject\NewProject\GameCharacter.cpp(97,14): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+  man_hinh_cho.cpp
+  MAP.cpp
+  phantich.cpp
+  speed.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 1103 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  NewProject.vcxproj -> C:\Users\havuc\source\repos\NewProject\x64\Release\NewProject.exe

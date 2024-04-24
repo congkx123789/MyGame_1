@@ -70,16 +70,13 @@ void man_hinh_cho::render2(bool a)
 bool man_hinh_cho::man_hinh_tuto()
 {
 	SDL_Event now_1;
-	SDL_PollEvent(&now_1);
 	while (1) {
-
+		SDL_PollEvent(&now_1);
 		render_tuto();
 		if (now_1.type == SDL_QUIT) return 1;
 
-		if (now_1.button.type == SDL_MOUSEBUTTONUP) {
+		if (now_1.button.type == SDL_MOUSEBUTTONUP) 
 			if (func_check.check_man_hinh_Rect(make_pair(now_1.motion.x, now_1.motion.y), menu.first)) break;;
-		}
-		SDL_PollEvent(&now_1);
 		SDL_Delay(20);
 	}
 
@@ -96,11 +93,8 @@ bool man_hinh_cho::man_hinh_cho_1()
 		if (now_2.button.type == SDL_MOUSEBUTTONUP) {
 			if (func_check.check_man_hinh_Rect(make_pair(now_2.motion.x, now_2.motion.y), start.first))	return 1;
 			if (func_check.check_man_hinh_Rect(make_pair(now_2.motion.x, now_2.motion.y), exit.first))	return 0;
-			if (func_check.check_man_hinh_Rect(make_pair(now_2.motion.x, now_2.motion.y), tutorial.first)) {
-				SDL_PollEvent(&now_2);
-				if (man_hinh_tuto()) return 0;
-			}
-			now_2.motion.x = -1;
+			if (func_check.check_man_hinh_Rect(make_pair(now_2.motion.x, now_2.motion.y), tutorial.first)) if (man_hinh_tuto()) return 0;
+			now_2.motion.x = -2;
 		}
 		SDL_Delay(20);
 	}
@@ -109,8 +103,8 @@ bool man_hinh_cho::man_hinh_cho_1()
 int man_hinh_cho::man_hinh_cho_2(bool a)
 {
 	SDL_Event now_3;
-	SDL_PollEvent(&now_3);
 	while (1) {
+		SDL_PollEvent(&now_3);
 		render2(a);
 		if (now_3.type == SDL_QUIT) return 0;
 		if (now_3.button.type == SDL_MOUSEBUTTONUP) {
@@ -120,7 +114,7 @@ int man_hinh_cho::man_hinh_cho_2(bool a)
 			if (func_check.check_man_hinh_Rect(make_pair(now_3.motion.x, now_3.motion.y), tutorial.first)) if (man_hinh_tuto()) return 0;
 			now_3.motion.x = -2;
 		}
-		SDL_PollEvent(&now_3);
+		
 		SDL_Delay(20);
 	}
 }

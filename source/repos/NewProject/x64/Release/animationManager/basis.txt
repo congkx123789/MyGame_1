@@ -1,0 +1,6 @@
+4
+player/adventurer-idle-2-00.png
+player/adventurer-idle-2-01.png
+player/adventurer-idle-2-02.png
+player/adventurer-idle-2-03.png
+

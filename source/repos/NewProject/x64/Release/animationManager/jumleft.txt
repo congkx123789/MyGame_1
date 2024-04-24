@@ -1,0 +1,5 @@
+4
+Leftplayer/adventurer-jump-00.png
+Leftplayer/adventurer-jump-01.png
+Leftplayer/adventurer-jump-02.png
+Leftplayer/adventurer-jump-03.png

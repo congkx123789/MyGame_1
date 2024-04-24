@@ -1,0 +1,5 @@
+4
+player/adventurer-air-attack1-00.png
+player/adventurer-air-attack1-01.png
+player/adventurer-air-attack1-02.png
+player/adventurer-air-attack1-03.png

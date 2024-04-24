@@ -1,2 +1,11 @@
-﻿  man_hinh_cho.cpp
+﻿  MAP.cpp
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(125,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(141,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(149,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(150,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(162,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(163,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(173,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(174,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\havuc\source\repos\NewProject\NewProject\MAP.cpp(197,21): warning C4018: '<': signed/unsigned mismatch
   NewProject.vcxproj -> C:\Users\havuc\source\repos\NewProject\Debug\NewProject.exe
