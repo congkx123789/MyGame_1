@@ -22,8 +22,6 @@ Etc…
 **Nguồn ảnh:**
 [LINK](https://glusoft.com/sdl2-tutorials/sprite-animations-sdl/)
 
-Etc...
-
 **Link video demo và giải thích:**
 
 [LINK1](https://www.youtube.com/watch?v=flN0YbK29K8)
