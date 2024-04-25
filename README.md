@@ -25,8 +25,8 @@ Etc…
 Etc...
 
 **Link video demo và giải thích:**
-[LINK1](https://www.youtube.com/watch?v=flN0YbK29K8)
-[LINK2](https://www.youtube.com/watch?v=xj53iajpgck)
-[LINK3](https://www.youtube.com/watch?v=tu9UlDEJ2_E)
+![LINK1](https://www.youtube.com/watch?v=flN0YbK29K8)
+![LINK2](https://www.youtube.com/watch?v=xj53iajpgck)
+![LINK3](https://www.youtube.com/watch?v=tu9UlDEJ2_E)
 
 
